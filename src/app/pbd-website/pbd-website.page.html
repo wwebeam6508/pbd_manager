@@ -1,0 +1,74 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>PBD Website</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed">เกี่ยวกับเรา</ion-label>
+    <ion-textarea rows="6" cols="20"></ion-textarea>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Logo</ion-label>
+    <div class="row">
+      <div class="col-sm-6">
+        <ion-label position="fixed">Original</ion-label>
+        <ion-img></ion-img>
+      </div>
+      <div class="col-sm-6">
+        <ion-label position="fixed">Preview</ion-label>
+        <ion-img></ion-img>
+        <ion-input type="file" accept="image/*" (change)="changeListener($event)"></ion-input>
+        <ion-button color="tertiary">upload</ion-button>
+      </div>
+      
+    </div>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">ข้อมูลติดต่อ</ion-label>
+      <ion-list>
+        <ion-item>
+          <ion-label >เลขที่อยู่</ion-label>
+          <ion-textarea rows="6" cols="90"></ion-textarea>
+        </ion-item>
+        <ion-item>
+          <ion-label >เบอร์โทร</ion-label>
+          <ion-input type="text" ></ion-input>
+        </ion-item>
+        <ion-item>
+          <ion-label >Email</ion-label>
+          <ion-input type="text" ></ion-input>
+        </ion-item>
+      </ion-list>
+  </ion-item>
+  <ion-list>
+    <div class="table-responsive">
+      <div padding><label><h5>ประเภทผลงาน</h5></label></div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th >ชื่อประเภท</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td >Anna</td>
+            <td >
+              <ion-button (click)="goToJobType(1)" color="secondary">
+                <ion-icon  name="brush"></ion-icon>
+              </ion-button>
+              <ion-button color="danger">
+                <ion-icon  name="trash"></ion-icon>
+              </ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </ion-list>
+</ion-content>

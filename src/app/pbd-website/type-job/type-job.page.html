@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>PBD Website/Type Job:</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="table-responsive">
+      <div padding>
+        <label><h5>ผลงานของ Type Job</h5></label>
+        <ion-button float-right color="primary">
+          <ion-icon name="add"></ion-icon>
+        </ion-button>
+      </div>
+      <table class="table table-bordered">
+        <thead>
+          <tr>
+            <th >ชื่องาน</th>
+            <th >รายละเอียด</th>
+            <th >วันที่งานเสร็จ</th>
+            <th>Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td >Anna</td>
+            <td >Anna</td>
+            <td >11/11/2019</td>
+            <td >
+              <ion-button (click)="goToJobType(1)" color="secondary">
+                <ion-icon  name="brush"></ion-icon>
+              </ion-button>
+              <ion-button color="danger">
+                <ion-icon  name="trash"></ion-icon>
+              </ion-button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</ion-content>

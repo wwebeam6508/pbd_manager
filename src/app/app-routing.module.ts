@@ -4,17 +4,21 @@ import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: 'home',
+    redirectTo: 'pbd_website',
     pathMatch: 'full'
   },
-  {
-    path: 'home',
-    loadChildren: './home/home.module#HomePageModule'
+  { path: 'pbd_website', children:[
+      {
+        path: '',
+        loadChildren: './pbd-website/pbd-website.module#PbdWebsitePageModule'
+      },
+      {
+        path: 'type_job/:id',
+        loadChildren: './pbd-website/type-job/type-job.module#TypeJobPageModule' 
+      }
+    ] 
   },
-  {
-    path: 'list',
-    loadChildren: './list/list.module#ListPageModule'
-  }
+  { path: 'login', loadChildren: './login/login.module#LoginPageModule' },
 ];
 
 @NgModule({

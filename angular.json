@@ -42,7 +42,12 @@
                 "input": "src/app/app.scss"
               }
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/js/jquery-3.4.1.min.js",
+              "src/assets/js/popper.min.js",
+              "src/assets/js/bootstrap.min.js",
+              "src/assets/js/freewall.js"
+            ],
             "es5BrowserSupport": true
           },
           "configurations": {
